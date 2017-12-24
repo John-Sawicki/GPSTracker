@@ -32,6 +32,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View view) {
                 lat = 29.3;
                 longitude =-96.2;
+                LatLng Houston = new LatLng(lat, longitude);
+                mMap.addMarker(new MarkerOptions().position(Houston).title("Marker in Sydney"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(Houston));
             }
         });
     }
@@ -52,8 +55,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         //LatLng sydney = new LatLng(lat, longitude);
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        //LatLng sydney = new LatLng(-34, 151);
+        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
